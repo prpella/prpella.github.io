@@ -16,7 +16,7 @@ function Circle(x, y, dx, dy, radius) {
     this.draw = function() {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-        const color = 'rgba(173, 34, 201, 0.44)'
+        const color = 'rgba(157, 148, 27, 0.44)'
         c.fillStyle = color
         c.fill()
     }
