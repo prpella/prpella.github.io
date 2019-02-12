@@ -23,8 +23,8 @@ function makeBall (x, y) {
     //var y = Math.random() * (innerHeight - radius * 2) + radius
     var dx = (Math.random() - 0.5)
     var dy = (Math.random() - 0.5)
-    var colorArray = ['#D79922', '#EFE2BA', '#F13C20', '#4056A1', '#C5CBE3']
-    // var colorArray = ['#E27D60', '#85DCB', '#E8A87C', '#C38D9E', '#41B3A3']
+    //var colorArray = ['#D79922', '#EFE2BA', '#F13C20', '#4056A1', '#C5CBE3']
+    var colorArray = ['rgba(216, 152, 34, 0.51)', 'rgba(239, 225, 185, 0.51)', 'rgba(241, 62, 34, 0.51)', 'rgba(64, 86, 160, 0.53)', 'rgba(196, 203, 227, 0.52)']
     var color = colorArray[Math.floor(Math.random() * colorArray.length)]
     circleArray.push(new Circle(x, y, dx, dy, radius, color))
 }
