@@ -1,26 +1,31 @@
 'use strict'
 
+
 const canvas = document.querySelector('canvas')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 const c = canvas.getContext('2d')
 
-
 var circleArray = []
 
-canvas.addEventListener('click', function() {
-    makeBall()
+canvas.addEventListener('click', function(event) {
+    var mousePosition = getMousePosition(canvas, event)
+    var x = mousePosition.x
+    var y = mousePosition.y
+    console.log(x + ',' + y)
+    makeBall(x, y)
 }, false)
 
-function makeBall () {
+function makeBall (x, y) {
     var radius = Math.random() * 50
-    var x = Math.random() * (innerWidth - radius * 2) + radius
-    var y = Math.random() * (innerHeight - radius * 2) + radius
+    //var x = Math.random() * (innerWidth - radius * 2) + radius
+    //var y = Math.random() * (innerHeight - radius * 2) + radius
     var dx = (Math.random() - 0.5)
     var dy = (Math.random() - 0.5)
-    var color = '#' + Math.floor(Math.random()*16777215).toString(16)
-    console.log(color)
+    var colorArray = ['#D79922', '#EFE2BA', '#F13C20', '#4056A1', '#C5CBE3']
+    // var colorArray = ['#E27D60', '#85DCB', '#E8A87C', '#C38D9E', '#41B3A3']
+    var color = colorArray[Math.floor(Math.random() * colorArray.length)]
     circleArray.push(new Circle(x, y, dx, dy, radius, color))
 }
 
@@ -65,3 +70,13 @@ function animate() {
 }
 
 animate()
+   
+
+//Get Mouse Position
+function getMousePosition(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+    }
+}
