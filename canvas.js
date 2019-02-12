@@ -1,12 +1,7 @@
 'use strict'
 
-
 const canvas = document.querySelector('canvas')
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-
 const c = canvas.getContext('2d')
-
 var circleArray = []
 
 canvas.addEventListener('click', function(event) {
@@ -16,6 +11,23 @@ canvas.addEventListener('click', function(event) {
     console.log(x + ',' + y)
     makeBall(x, y)
 }, false)
+
+initialize();
+
+function initialize() {
+    window.addEventListener('resize', resizeCanvas, false);
+    resizeCanvas();
+ }
+
+ function redraw() {
+    c.strokeRect(0, 0, window.innerWidth, window.innerHeight);
+ }
+
+ function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    redraw();
+}
 
 function makeBall (x, y) {
     var radius = Math.random() * 50
@@ -70,9 +82,7 @@ function animate() {
 }
 
 animate()
-   
 
-//Get Mouse Position
 function getMousePosition(canvas, event) {
     var rect = canvas.getBoundingClientRect();
     return {
