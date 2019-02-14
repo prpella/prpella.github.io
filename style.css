@@ -6,8 +6,10 @@ html, body {
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    
+    font-family: 'Raleway', sans-serif;
     height: 98%;
+    pointer-events: none;
 }
 
 ::selection {
@@ -15,9 +17,17 @@ body {
 }
 
 h1, h2 {
-    font-family: 'Poiret One', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;    
-    font-size: 8vmax 
+    font-size: 5vmax;
+    font-weight: 100;
+}
+
+.highlight {
+    background: #F13C20;
+    border-radius: 50%;
+    color:#f2f0eb;
+    padding: 10px;
 }
 
 canvas {
@@ -28,10 +38,16 @@ canvas {
     top: 0;
     height: 100vh;
     width: 100%;
+    pointer-events: all;
 }
 
 .header {
     margin-top: 20px;
     text-align: right;
     margin-right: 130px;
+    pointer-events: all;
+}
+
+.content {
+    pointer-events: none;
 }
