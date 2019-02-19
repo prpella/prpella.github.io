@@ -6,10 +6,13 @@ html, body {
 }
 
 body {
-    
     font-family: 'Raleway', sans-serif;
     height: 98%;
     pointer-events: none;
+}
+
+section {
+    min-height: 100%;
 }
 
 ::selection {
@@ -19,15 +22,31 @@ body {
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;    
+    line-height: 1.3;
+}
+
+h1 {
     font-size: 5vmax;
     font-weight: 100;
+
+}
+
+h2 {
+    font-size: 4vmax;
+    font-weight: lighter;
 }
 
 .highlight {
-    background: #F13C20;
-    border-radius: 50%;
-    color:#f2f0eb;
-    padding: 10px;
+    padding-inline-start: 0.3em;
+    padding-inline-end: 0.3em;
+}
+
+.red {
+    background: rgba(245, 117, 97, 0.67);
+}
+
+.blue {
+    background: rgba(196, 203, 227, 0.67);
 }
 
 canvas {
@@ -50,4 +69,44 @@ canvas {
 
 .content {
     pointer-events: none;
+}
+
+.intro {
+    font-size: xx-large;
+    margin: 8em;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    pointer-events: all;
+}
+
+.social-links a {
+    font-size: 1.8em;
+    color: inherit;
+}
+
+.social-links a:hover {
+    color: #F13C20;
+}
+
+.fa-github::before {
+    content: "\f09b";
+}
+
+.fa-linkedin::before {
+    content: "\f08c";
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.fa-envelope::before {
+    content: "\f0e0";
+}
+
+.fa, .fas {
+    font-weight: 900;
 }
