@@ -17,10 +17,8 @@ drawCanvas(canvas)
 function home () {
   return html`
   <section id="home">
-  <span class="interact">click anywhere to make some bubbles</span>
-  <h1>Hi, my name is <br><span class="highlight red">Ela Blechschmidt</span><br>
-  <h2>I'm a <span class="highlight blue">software developer and UX engineer</span> based in Berlin</h2>
-  <br>
+  <h1>Hi, my name is <br><span class="highlight red">Ela</span><br>
+  <h2>I'm a <span class="highlight blue">software developer and UX engineer</span> living in Berlin</h2>
   <div class="social-links">
       <a class="email" href="mailto:ela@posteo.de">
           <span class="fas fa-envelope"></span>
@@ -32,6 +30,13 @@ function home () {
           <i class="fab fa-linkedin"></i>
       </a>
   </div>
+      <h2 class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I am a social scientist turned UX engineer with a passion for accessible and highly usable websites and interfaces. <span class="highlight blue">I prefer pair programming and an agile team setup.</span>
+        I love to work in a friendly, inclusive and diverse surrounding.</p>
+  <div id="projects">
+  </div>
+  <div id="contact">
+  </div>
+  
 </section>
   `
 }
