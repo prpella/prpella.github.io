@@ -15,7 +15,12 @@ section {
     height: 100%;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 100px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 ::selection {
@@ -31,6 +36,9 @@ h1, h2 {
 h1 {
     font-size: 5vmax;
     font-weight: 100;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 15%;
 
 }
 
@@ -87,7 +95,7 @@ canvas {
 }
 
 .social-links {
-    font-size: x-large;
+    font-size: large;
     display: flex;
     justify-content: space-evenly;
     pointer-events: all;
@@ -126,6 +134,6 @@ img.flag {
     position: absolute;
     top: 0;
     right: 0;
-    width: 140px;
-    height: auto;
+    height: 18%;
+    max-height: 150px;
 }
