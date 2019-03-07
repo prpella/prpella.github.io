@@ -17,7 +17,7 @@ drawCanvas(canvas)
 function home () {
   return html`
   <section id="home">
-  <h1>Hi, my name is <br><span class="highlight red">Ela</span><br>
+  <h1>Hi, my name is <br><span class="highlight red">Ela</span><br></h1>
   <h2>I'm a <span class="highlight blue">software developer and UX engineer</span> living in Berlin</h2>
   <div class="social-links">
       <a class="email" href="mailto:ela@posteo.de">
