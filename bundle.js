@@ -127,8 +127,7 @@ function home () {
           <i class="fab fa-linkedin"></i>
       </a>
   </div>
-      <h2 class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I am a social scientist turned UX engineer with a passion for accessible and highly usable websites and interfaces. <span class="highlight blue">I prefer pair programming and an agile team setup.</span>
-        I love to work in a friendly, inclusive and diverse surrounding.</p>
+      <h2 class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>.</p>
   <div id="projects">
   </div>
   <div id="contact">
