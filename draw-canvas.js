@@ -6,11 +6,12 @@ module.exports = function (canvas) {
 
 
   canvas.addEventListener('click', function(event) {
-    console.log('clock')
     var mousePosition = getMousePosition(canvas, event)
     var x = mousePosition.x
     var y = mousePosition.y
-    makeBall(x, y)
+    for (var i = 0; i < 5; i++) {
+      makeBall(x, y)
+    }
   }, false)
   initialize()
 
@@ -37,7 +38,8 @@ module.exports = function (canvas) {
     var dy = (Math.random() - 0.2)
     // var colorArray = ['#D79922', '#EFE2BA', '#F13C20', '#4056A1', '#C5CBE3']
     // eslint-disable-next-line max-len
-    var colorArray = ['rgba(216, 152, 34, 0.51)', 'rgba(239, 225, 185, 0.51)', 'rgba(241, 62, 34, 0.51)', 'rgba(64, 86, 160, 0.53)', 'rgba(196, 203, 227, 0.52)', 'rgba(245, 117, 97, 0.67)']
+    // var colorArray = ['rgba(216, 152, 34, 0.51)', 'rgba(239, 225, 185, 0.51)', 'rgba(241, 62, 34, 0.51)', 'rgba(64, 86, 160, 0.53)', 'rgba(196, 203, 227, 0.52)', 'rgba(245, 117, 97, 0.67)']
+    var colorArray = ['rgba(194, 194, 214, 0.72)', 'rgba(211, 248, 226, 0.72)', 'rgba(228, 193, 249, 0.72)', 'rgba(237, 231, 177, 0.72)', 'rgba(169, 222, 249, 0.72)']
     var color = colorArray[Math.floor(Math.random() * colorArray.length)]
     circleArray.push(new Circle(x, y, dx, dy, radius, color))
   }
