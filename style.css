@@ -25,11 +25,11 @@ section {
 }
 
 ::selection {
-    background: #D79922;
+    background: #f7ed90;
 }
 
 h1, h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Crimson Text', serif;
     text-align: center;    
     line-height: 1.3;
 }
@@ -59,11 +59,11 @@ h2.about {
 }
 
 .red {
-    background: rgba(245, 117, 97, 0.67);
+    background: rgba(228, 193, 249, 0.72);
 }
 
 .blue {
-    background: rgba(196, 203, 227, 0.67);
+    background: rgba(169, 222, 249, 0.72);
 }
 
 canvas {
@@ -105,7 +105,7 @@ canvas {
 }
 
 .social-links a:hover {
-    color: #D79922;
+    color: #cca0e6;
 }
 
 .fa-github::before {
