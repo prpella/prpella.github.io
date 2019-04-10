@@ -1309,11 +1309,10 @@ module.exports = function (canvas) {
 
 
   canvas.addEventListener('click', function(event) {
-    console.log('clock')
     var mousePosition = getMousePosition(canvas, event)
     var x = mousePosition.x
     var y = mousePosition.y
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
       makeBall(x, y)
     }
   }, false)
