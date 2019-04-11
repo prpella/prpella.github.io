@@ -30,7 +30,7 @@ function home () {
           <i class="fab fa-linkedin"></i>
       </a>
   </div>
-      <h2 class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I love working in an friendly and diverse environment preferably in pair programming mode.</p>
+      <p class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I love working in an friendly and diverse environment preferably in pair programming mode.</p>
   <div id="projects">
   </div>
   <div id="contact">
