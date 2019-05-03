@@ -35,7 +35,8 @@ module.exports = function (canvas) {
     const dx = (Math.random() - 0.2)
     const dy = (Math.random() - 0.2)
     // eslint-disable-next-line max-len
-    const colorArray = ['rgba(194, 194, 214, 0.72)', 'rgba(211, 248, 226, 0.72)', 'rgba(228, 193, 249, 0.72)', 'rgba(237, 231, 177, 0.72)', 'rgba(169, 222, 249, 0.72)']
+    // const colorArray = ['rgba(194, 194, 214, 0.72)', 'rgba(211, 248, 226, 0.72)', 'rgba(228, 193, 249, 0.72)', 'rgba(237, 231, 177, 0.72)', 'rgba(169, 222, 249, 0.72)']
+    const colorArray = ['rgba(227, 134, 186, 0.7)', 'rgba(156, 136, 244, 0.7)', 'rgba(149, 229, 206, 0.7)', 'rgba(153, 182, 239, 0.7)']
     const color = colorArray[Math.floor(Math.random() * colorArray.length)]
     circleArray.push(new Circle(x, y, dx, dy, radius, color))
   }
