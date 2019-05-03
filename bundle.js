@@ -1309,9 +1309,9 @@ module.exports = function (canvas) {
 
 
   canvas.addEventListener('click', function(event) {
-    var mousePosition = getMousePosition(canvas, event)
-    var x = mousePosition.x
-    var y = mousePosition.y
+    const mousePosition = getMousePosition(canvas, event)
+    const x = mousePosition.x
+    const y = mousePosition.y
     for (var i = 0; i < 5; i++) {
       makeBall(x, y)
     }
@@ -1334,16 +1334,13 @@ module.exports = function (canvas) {
   }
 
   function makeBall (x, y) {
-    var radius = Math.random() * 50
-    // var x = Math.random() * (innerWidth - radius * 2) + radius
-    // var y = Math.random() * (innerHeight - radius * 2) + radius
-    var dx = (Math.random() - 0.2)
-    var dy = (Math.random() - 0.2)
-    // var colorArray = ['#D79922', '#EFE2BA', '#F13C20', '#4056A1', '#C5CBE3']
+    const radius = Math.random() * 50
+    const dx = (Math.random() - 0.2)
+    const dy = (Math.random() - 0.2)
     // eslint-disable-next-line max-len
-    // var colorArray = ['rgba(216, 152, 34, 0.51)', 'rgba(239, 225, 185, 0.51)', 'rgba(241, 62, 34, 0.51)', 'rgba(64, 86, 160, 0.53)', 'rgba(196, 203, 227, 0.52)', 'rgba(245, 117, 97, 0.67)']
-    var colorArray = ['rgba(194, 194, 214, 0.72)', 'rgba(211, 248, 226, 0.72)', 'rgba(228, 193, 249, 0.72)', 'rgba(237, 231, 177, 0.72)', 'rgba(169, 222, 249, 0.72)']
-    var color = colorArray[Math.floor(Math.random() * colorArray.length)]
+    // const colorArray = ['rgba(194, 194, 214, 0.72)', 'rgba(211, 248, 226, 0.72)', 'rgba(228, 193, 249, 0.72)', 'rgba(237, 231, 177, 0.72)', 'rgba(169, 222, 249, 0.72)']
+    const colorArray = ['rgba(227, 134, 186, 0.7)', 'rgba(156, 136, 244, 0.7)', 'rgba(149, 229, 206, 0.7)', 'rgba(153, 182, 239, 0.7)']
+    const color = colorArray[Math.floor(Math.random() * colorArray.length)]
     circleArray.push(new Circle(x, y, dx, dy, radius, color))
   }
 
@@ -1390,7 +1387,7 @@ module.exports = function (canvas) {
   animate()
 
   function getMousePosition(canvas, event) {
-    var rect = canvas.getBoundingClientRect()
+    const rect = canvas.getBoundingClientRect()
     return {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top
@@ -1416,28 +1413,44 @@ drawCanvas(canvas)
 
 
 function home () {
-  return html`
-  <section id="home">
-  <h1>Hi, my name is <br><span class="highlight red">Ela</span><br></h1>
-  <h2>I'm a <span class="highlight blue">software developer and UX engineer</span> living in Berlin. </h2>
-  <div class="social-links">
-      <a class="email" href="mailto:ela@posteo.de">
-          <span class="fas fa-envelope"></span>
-      </a>
-      <a target="_blank" href="https://github.com/prpella">
-          <i class="fab fa-github"></i>
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/manuelablechschmidt/">
-          <i class="fab fa-linkedin"></i>
-      </a>
-  </div>
-      <h2 class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I love working in an friendly and diverse environment preferably in pair programming mode.</p>
-  <div id="projects">
-  </div>
-  <div id="contact">
-  </div>
-  
-</section>
+    return html`
+    <section>
+        <div id="home">
+            <h1>Hi, my name is <br><span class="highlight red">Ela</span><br></h1>
+            <h2>I'm a <span class="highlight blue">software developer and UX engineer</span> living in Berlin.</h2>
+        </div>
+        <div class="social-links">
+            <a class="email" href="mailto:ela@posteo.de">
+                <span class="fas fa-envelope"></span>
+            </a>
+            <a target="_blank" href="https://github.com/prpella">
+                <i class="fab fa-github"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/manuelablechschmidt/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+            <p class="about">I like crafting user friendly websites and applications <span class="highlight blue">with Node.js, Javascript, CSS and HTML </span>. I love working in an friendly and diverse environment preferably in pair programming mode.</p>
+        <div id="projects">
+        <br>
+            <h2>Projects</h2>
+            <h3>Blockparty</h3>
+            <h4>A secure Scuttlebutt client for building your own decentralized social network</h4>
+            <p><a href="https://www.scuttlebutt.nz">Scuttlebutt</a> is a decentralized social network that functions completely peer-to-peer. 
+            It is possible to create lots of different networks for different groups and purposes, but that process requires a bit of technical skill - 
+            blockparty addresses this by making it easy to set up a new network and invite people to it. It's also a cool client for any Scuttlebutt network.</p>
+                <div class="project-links">   
+                    <a target="_blank" href="https://github.com/blockparty-ssb">
+                        <i class="fab fa-github"></i>
+                        Repo
+                    </a>
+                    <a target="_blank" href="https://blockparty-ssb.github.io">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        Website
+                    </a>
+                </div>
+        </div>
+    </section>
   `
 }
 
