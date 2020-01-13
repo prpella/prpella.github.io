@@ -51,6 +51,20 @@ function home () {
                         Website
                     </a>
                 </div>
+
+                <h3>Ninia la Grande - Homepage</h3>
+                <h4>User friendly website powered by <a href="https://getkirby.com/">kirby</a></h4>
+                <p>Ninia needed a new website: stylish, clean, lightweight yet powerful and easy to use.
+                We decided to move from WordPress to Kirby. Kirby is also based on PHP, but contrary to most modern CMS systems, 
+                it does not rely on a database like MySQL. Instead, content is stored in a file 
+                structure and can be edited using a text editor or the integrated admin panel.
+                </p>
+                    <div class="project-link">   
+                        <a target="_blank" href="https://www.ninialagrande.de">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            Website
+                        </a>
+                    </div>
         </div>
     </section>
   `
